@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "stylelint-config-airbnb",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "rule-empty-line-before": "always",
+    "at-rule-empty-line-before": "always",
+    "order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type": "rule",
+        "selector": "^&."
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      }
+    ],
+    "order/properties-order": [
+      [
+        "position",
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "z-index",
+        "min-width",
+        "width",
+        "min-height",
+        "height",
+        "margin",
+        "padding",
+        "overflow",
+        "background-color",
+        "background",
+        "background-size",
+        "color",
+        "font"
+      ],
+      {
+        "unspecified": "bottom"
+      }
+    ]
+  }
+}
