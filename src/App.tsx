@@ -1,15 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+
+import Counter from './Counter';
 
 const App: React.FC = () => (
   <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-    </header>
+    <Counter>
+      {(count, setCount) => (
+        <div>
+          {count}
+          <button type="button" onClick={() => setCount(count + 1)}>
+            Click
+          </button>
+        </div>
+      )}
+    </Counter>
   </div>
 );
 

@@ -18,6 +18,16 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.tsx', '.jsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.tsx', '.jsx', '.ts'] }],
+    'linebreak-style': 0,
+    'arrow-parens': ['error', 'as-needed'],
+    'react/prop-types': [2, { ignore: ['children'] }],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
