@@ -1,0 +1,3 @@
+export const RESET_STATE = 'RESET_STATE';
+
+export const GLOBAL_HTTP_ERROR = 'GLOBAL_HTTP_ERROR';
